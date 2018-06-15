@@ -1,3 +1,4 @@
+// This file contains logic for routing
 const express = require('express');
 const indexController = require('../controllers/indexController');
 

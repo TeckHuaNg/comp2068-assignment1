@@ -1,9 +1,12 @@
+// This file contains information that will show in files inside "views" folder
 exports.homePage = (req, res, next) => {
   res.render('index', {
     title: 'Teck Hua Ng',
     message: 'Thank you for visiting my portfolio. This website is built using ',
     express: 'ExpressJs Framework',
     mdl: 'GetMDL CSS',
+    github: 'GitHub',
+    heroku: 'Heroku',
   });
 };
 
@@ -17,7 +20,7 @@ exports.about = (req, res, next) => {
 
 exports.services = (req, res, next) => {
   res.render('services', {
-    message: 'Services',
+    title: 'Services',
     service_1: 'Software Developer (.NET, Java, C#)',
     service_2: 'Web Developer (HTML & CSS, PHP, JavaScript)',
     service_3: 'Business Analyst',
@@ -26,18 +29,18 @@ exports.services = (req, res, next) => {
   });
 };
 
+// The email function is learnt from https://www.youtube.com/watch?v=nF9g1825mwk
 const nodemailer = require('nodemailer');
 
 exports.projects = (req, res, next) => {
   res.render('projects', {
-    message: 'Projects',
-    lab2: 'Lab 2',
+    title: 'Projects',
   });
 };
 
 exports.contact = (req, res, next) => {
   res.render('contact', {
-    title: 'Enter your information',
+    title: 'Contact me using the form below',
   });
 };
 
