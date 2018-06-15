@@ -1,11 +1,77 @@
 <% include partials/header %>
+    <style scoped>
+        form {
+            width: 400px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            padding: 100px;
 
-    <h1>
-        Enter your information
-    </h1>
+        }
+
+        h3 {
+            text-align: center;
+            position: relative;
+
+        }
+
+        p {
+            position: relative;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+        }
+
+        .closer {
+            text-align: center;
+            margin-bottom: -25px;
+        }
+    </style>
     <h3>
-        <%= message %>
+        <%= title %>
     </h3>
+
+
+    <h4 class="closer">
+        If you have any inquiries, contact me using the form below.
+    </h4>
+
+    <form method="POST" action="/contact">
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="company" name="company">
+            <label class="mdl-textfield__label" for="Company">Company...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <label class="mdl-textfield__label" for="name">Name...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" id="email" name="email">
+            <label class="mdl-textfield__label" for="publisher">Email Address...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="tel" id="phone" name="phone">
+            <label class="mdl-textfield__label" for="phone">Phone Number...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <textarea class="mdl-textfield__input" id="message" name="message"></textarea>
+            <label class="mdl-textfield__label" for="message">Message...</label>
+        </div>
+        <br>
+        <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+            Submit
+        </button> -->
+        <button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            type="submit">Send</button>
+        <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+        </div>
+
+    </form>
 
 
     <% include partials/footer %>

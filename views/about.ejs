@@ -1,10 +1,20 @@
 <% include partials/header %>
+    <style>
+        h3 {
+            margin-left: 55px;
+            font-family: fantasy;
+        }
+    </style>
 
-    <h1>Description:</h1>
+    <h3>Something about me ...</h3>
 
-    <h2>
-        <%= message %>
-    </h2>
+    <div id="container">
+        <img src="/images/kuala-lumpur-1820944__340.jpg" alt="kuala lumpur image" style=" float: left; margin-left: 15px; margin-right: 10px;"
+            width="588" height="340" />
 
+        <h4 class="about">
+            <%= message %>
+        </h4>
+    </div>
 
     <% include partials/footer %>
