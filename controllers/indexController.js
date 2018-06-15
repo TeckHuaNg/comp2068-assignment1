@@ -60,14 +60,15 @@ exports.send = (req, res) => {
 
   const connect = process.env.PASSWORD;
   const email = process.env.EMAIL;
-  const service_p = process.env.SERVICE;
+  const serviceP = process.env.SERVICE;
 
   const smtpTransport = require('nodemailer-smtp-transport');
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport(smtpTransport({
-    service: service_p,
-    // port: 465,
-    // secure: false, // true for 465, false for other ports
+    service: serviceP,
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports
     // requireTLS: true,
     auth: {
       user: email,
