@@ -29,14 +29,14 @@ exports.services = (req, res, next) => {
   });
 };
 
-// The email function is learnt from https://www.youtube.com/watch?v=nF9g1825mwk
-const nodemailer = require('nodemailer');
-
 exports.projects = (req, res, next) => {
   res.render('projects', {
     title: 'Projects',
   });
 };
+
+// The email function is learnt from https://www.youtube.com/watch?v=nF9g1825mwk
+const nodemailer = require('nodemailer');
 
 exports.contact = (req, res, next) => {
   res.render('contact', {
@@ -66,8 +66,8 @@ exports.send = (req, res) => {
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    // port: 465,
-    // secure: true, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     // requireTLS: true,
     auth: {
       type: 'login',
