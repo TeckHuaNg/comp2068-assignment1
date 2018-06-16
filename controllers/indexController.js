@@ -60,12 +60,11 @@ exports.send = (req, res) => {
 
   const connect = process.env.PASSWORD;
   const email = process.env.EMAIL;
-  const serviceP = process.env.SERVICE;
+  // const serviceP = process.env.SERVICE;
 
-  const smtpTransport = require('nodemailer-smtp-transport');
+  // const smtpTransport = require('nodemailer-smtp-transport');
   // create reusable transporter object using the default SMTP transport
-  const transporter = nodemailer.createTransport(smtpTransport({
-    service: serviceP,
+  const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     secure: true, // true for 465, false for other ports
@@ -77,7 +76,7 @@ exports.send = (req, res) => {
     tls: {
       rejectUnauthorized: false,
     },
-  }));
+  });
 
   const my_email = process.env.MYEMAIL;
   // setup email data with unicode symbols
