@@ -66,9 +66,9 @@ exports.send = (req, res) => {
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // true for 465, false for other ports
-    // requireTLS: true,
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    requireTLS: true,
     auth: {
       type: 'login',
       user: email,
@@ -98,7 +98,7 @@ exports.send = (req, res) => {
     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
     res.render('contact', {
-      title: 'Enter your information',
+      title: 'Contact me using the form below',
     });
   });
 };
