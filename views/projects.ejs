@@ -1,50 +1,72 @@
 <% include partials/header %>
 
-    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-        <div class="mdl-card mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">
-                    <%= title %>
-                </h4>
-                <!-- <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+    <style>
+        .section {
+            overflow-y: scroll;
+            margin-bottom: 90px;
+        }
+    </style>
+    <div class="section">
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+                <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                    <h4 class="mdl-cell mdl-cell--12-col">
+                        <%= title %>
+                    </h4>
+                    <!-- <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                     <div class="section__circle-container__circle mdl-color--primary"></div>
                 </div> -->
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                    <h5>
-                        <a href="https://github.com/TeckHuaNg/Lab2COMP2068">
-                            Lab 2
-                        </a>
-                    </h5>
-                    A simple website that allows user to search airports. Tutorial can be found
-                    <a href="https://www.youtube.com/watch?v=y4gZMJKAeWs">here</a>.
+                    <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>
+                            <a href="https://github.com/TeckHuaNg/Lab2COMP2068">
+                                Lab 2
+                            </a>
+                        </h5>
+                        A simple website that allows user to search airports. Tutorial can be found
+                        <a href="https://www.youtube.com/watch?v=y4gZMJKAeWs">here</a>.
 
-                </div>
-                <!-- <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                    </div>
+                    <!-- <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                      <div class="section__circle-container__circle mdl-color--primary"></div> 
                 </div> -->
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                    <h5>
-                        <a href="https://github.com/TeckHuaNg/comp2068-lab3">Lab 3</a>
-                    </h5>
-                    Node.JS Simple Calculator. To use this calculator follow the image below. The function can only be multiply, divide, add,
-                    subtract.
-                    <img src="/images/lab3divide.PNG" alt="divide" style="display: block; margin-top: 10px;">
-                </div>
-                <!-- <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                    <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>
+                            <a href="https://github.com/TeckHuaNg/comp2068-lab3">Lab 3</a>
+                        </h5>
+                        Node.JS Simple Calculator. To use this calculator follow the image below. The function can only be multiply, divide, add,
+                        subtract.
+                        <img src="/images/lab3divide.PNG" alt="divide" style="display: block; margin-top: 10px;">
+                    </div>
+                    <!-- <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                     <div class="section__circle-container__circle mdl-color--primary"></div>
                 </div>  -->
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                    <h5>
-                        <a href="https://comp2068lab--4.herokuapp.com/">Lab 4</a>
-                    </h5>
-                    This website is created with Express Generator and has links for each of my family member.
+                    <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>
+                            <a href="https://comp2068lab--4.herokuapp.com/">Lab 4</a>
+                        </h5>
+                        This website is created with Express Generator and has links for each of my family member.
+                    </div>
+
+                    <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>
+                            <a href="https://comp2068-lab7.herokuapp.com/games">Lab 7</a>
+                        </h5>
+                        This website is allows you to play retro games. You can register an account to add, edit and delete the game.
+                    </div>
+
+                    <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>
+                            <a href="https://comp2068-finalassignment.herokuapp.com/login">Final Assignment</a>
+                        </h5>
+                        This is a phone store website that you can login with Google or LinkedIn to modify the phones.
+                    </div>
+                </div>
+                <div class="mdl-card__actions">
+                    <a href="https://github.com/TeckHuaNg" class="mdl-button">More Projects</a>
                 </div>
             </div>
-            <div class="mdl-card__actions">
-                <a href="https://github.com/TeckHuaNg" class="mdl-button">More Projects</a>
-            </div>
-        </div>
-        <!-- <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
+            <!-- <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
             <i class="material-icons">more_vert</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
@@ -52,7 +74,6 @@
             <li class="mdl-menu__item" disabled>Ipsum</li>
             <li class="mdl-menu__item">Dolor</li>
         </ul> -->
-    </section>
-
-
+        </section>
+    </div>
     <% include partials/footer %>

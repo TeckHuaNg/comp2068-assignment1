@@ -18,14 +18,20 @@ exports.about = (req, res, next) => {
   });
 };
 
+exports.transcript = (req, res, next) => {
+  res.render('transcript', {
+    title: 'My unofficial transcript',
+  });
+};
+
 exports.services = (req, res, next) => {
   res.render('services', {
     title: 'Services',
     service_1: 'Software Developer (.NET, Java, C#)',
     service_2: 'Web Developer (HTML & CSS, PHP, JavaScript)',
-    service_3: 'Business Analyst',
+    service_3: 'Business Analyst (Excel & Power BI)',
     service_4: 'Project Management for IT',
-    service_5: 'Database Management (MySQL, MongoDB)',
+    service_5: 'Database Management (MySQL, MS SQL Management Studio, MongoDB)',
   });
 };
 
